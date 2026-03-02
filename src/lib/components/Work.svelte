@@ -33,7 +33,7 @@
 					url: 'https://rosenthaler.co',
 					role: 'Co-Founder',
 					period: '2025–Now',
-					description: 'Running a product studio in Berlin — end-to-end design and engineering for startups and global industrial clients, including long-term Shopware 6 and React infrastructure.'
+					description: 'Running a product studio in Berlin — architecting digital products for startups and industrial leaders like HORSCH. Full lifecycle from 0\u21921 strategy to high-scale engineering.'
 				}
 			]
 		},
@@ -56,13 +56,13 @@
 					company: 'Almanach',
 					role: 'Freelance Developer',
 					period: '2024–2025',
-					description: 'Built a web application for content management and editorial workflows.'
+					description: 'Built a full-stack dashboard with Next.js, Firebase Auth, Stripe payments, and ActiveCampaign tracking.'
 				},
 				{
 					company: 'Tom Tailor',
 					role: 'Freelance Developer',
 					period: '2021–2023',
-					description: 'Developed a headless e-commerce shop in an agile team, collaborating with integration partners.'
+					description: 'Developed a headless e-commerce shop in Next.js, collaborating with integration partners in an agile team.'
 				},
 				{
 					company: 'Segler Maschinenfabrik',

@@ -66,11 +66,3 @@ body {
 ::-webkit-scrollbar-thumb:hover {
 	background: var(--color-text-tertiary);
 }
-
-/* Hero last name — clean outline */
-.hero-outline {
-	color: var(--color-bg) !important;
-	-webkit-text-stroke: 2px var(--color-text);
-	paint-order: stroke fill;
-	user-select: none;
-}
