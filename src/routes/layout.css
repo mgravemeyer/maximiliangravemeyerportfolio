@@ -1,0 +1,76 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@theme {
+	--font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+	--color-bg: #fafafa;
+	--color-bg-alt: #f0f0f0;
+	--color-text: #1a1a1a;
+	--color-text-secondary: #666666;
+	--color-text-tertiary: #999999;
+	--color-border: #e5e5e5;
+	--color-border-light: #f0f0f0;
+	--color-accent: #1a1a1a;
+	--color-accent-hover: #333333;
+	--color-surface: #ffffff;
+	--color-guide: rgba(0, 0, 0, 0.06);
+	--color-cursor: #1a1a1a;
+	--color-cursor-text: #ffffff;
+	--color-collaborator: #6366f1;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--font-sans);
+	background-color: var(--color-bg);
+	color: var(--color-text);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@media (pointer: fine) {
+	body {
+		cursor: none;
+	}
+
+	a,
+	button,
+	[role='button'] {
+		cursor: none;
+	}
+}
+
+::selection {
+	background-color: var(--color-accent);
+	color: var(--color-cursor-text);
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--color-border);
+	border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--color-text-tertiary);
+}
+
+/* Hero last name — clean outline */
+.hero-outline {
+	color: var(--color-bg) !important;
+	-webkit-text-stroke: 2px var(--color-text);
+	paint-order: stroke fill;
+	user-select: none;
+}
