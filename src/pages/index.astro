@@ -13,10 +13,21 @@ import Layout from '../layouts/Layout.astro';
     lead product as CPO at a stealth startup.
   </p>
 
-  <p>
-    Project inquiries run through
-    <a href="https://rosenthaler.co">rosenthaler.co</a> &mdash; everything else, just email me.
-  </p>
+  <a class="studio" href="https://rosenthaler.co" rel="noopener">
+    {/* The Rosenthaler quatrefoil: lobes on the axes, outlined diamond core
+        in the same color as the outline (never rotate, never color the core). */}
+    <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" aria-hidden="true">
+      <path d="M36 36 A24 24 0 0 1 84 36 A24 24 0 0 1 84 84 A24 24 0 0 1 36 84 A24 24 0 0 1 36 36 Z"></path>
+      <path stroke-width="4" d="M60 43 L77 60 L60 77 L43 60 Z"></path>
+    </svg>
+    <span>
+      <strong>Rosenthaler</strong>
+      <small>We design, build, and run digital products for established companies.</small>
+    </span>
+    <span class="arrow" aria-hidden="true">&rarr;</span>
+  </a>
+
+  <p>Project inquiries run through the studio &mdash; everything else, just email me.</p>
 
   <ul class="links">
     <li><a href="mailto:maximilian@gravemeyer.com">maximilian@gravemeyer.com</a></li>
@@ -33,6 +44,43 @@ import Layout from '../layouts/Layout.astro';
   p {
     margin-top: 1.5rem;
     max-width: 55ch;
+  }
+  .studio {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    transition: border-color 150ms ease;
+  }
+  .studio:hover {
+    border-color: #1a1a1a;
+  }
+  .studio svg {
+    width: 2.25rem;
+    height: 2.25rem;
+    flex-shrink: 0;
+  }
+  .studio strong {
+    display: block;
+    font-weight: 650;
+  }
+  .studio small {
+    display: block;
+    color: #666;
+    line-height: 1.45;
+  }
+  .studio .arrow {
+    margin-left: auto;
+    color: #999;
+    transition: transform 150ms ease;
+  }
+  .studio:hover .arrow {
+    transform: translateX(2px);
+    color: #1a1a1a;
   }
   .links {
     list-style: none;
