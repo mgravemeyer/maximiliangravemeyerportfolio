@@ -13,45 +13,65 @@ const experience = [
         description:
           'Running an engineering studio in Berlin — helping established companies decide what to build, then building and running it. Clients include HORSCH, Almanach, and Innomarks: from product strategy to systems in production.',
       },
+      {
+        company: 'People Branding Company',
+        role: 'Freelance Developer',
+        period: '2025–Now',
+      },
+      {
+        company: 'HORSCH Maschinen',
+        role: 'via Rosenthaler',
+        period: '2024–Now',
+        description:
+          'Digital product landscape — myField, HORSCH Report, and the translation platform.',
+      },
+      {
+        company: 'Almanach',
+        role: 'via Rosenthaler',
+        period: '2024–Now',
+        description:
+          'Learning platform at almanach.app — built end to end, still optimized today.',
+      },
+      {
+        company: 'Armbrüster Consulting',
+        role: 'Freelance Developer',
+        period: '2018–Now',
+      },
     ],
   },
   {
     label: 'Previously',
     roles: [
       {
-        company: 'smart',
-        role: 'Freelance Designer',
-        period: '2025',
-        description:
-          'Designing digital experiences and interface concepts for a connected vehicle platform.',
-      },
-      {
         company: 'Coffi',
         role: 'Freelance Developer',
-        period: '2025',
+        period: '2024',
         description:
           'Full-stack development for a specialty coffee platform — storefront, ordering, and payments.',
       },
       {
-        company: 'Almanach',
-        role: 'Freelance Developer',
-        period: '2024–2025',
-        description:
-          'Built a full-stack dashboard with Next.js, Firebase Auth, Stripe payments, and ActiveCampaign tracking.',
-      },
-      {
         company: 'Tom Tailor',
         role: 'Freelance Developer',
-        period: '2021–2023',
+        period: '2021–2022',
         description:
           'Developed a headless e-commerce shop in Next.js, collaborating with integration partners in an agile team.',
       },
       {
-        company: 'Segler Maschinenfabrik',
+        company: 'Segler Förderanlagen',
         role: 'Freelance Developer',
-        period: '2018–2022',
+        period: '2019–2022',
         description:
           "Conceptualized, designed, and developed an iOS enterprise app for logging internal processes. Won the 'Zukunftsfest' award.",
+      },
+      {
+        company: 'Micony',
+        role: 'Freelance Developer',
+        period: '2020–2021',
+      },
+      {
+        company: 'Horváth & Partners',
+        role: 'Freelance Developer',
+        period: '2020',
       },
     ],
   },
@@ -97,7 +117,7 @@ const experience = [
                 <span class="role">{r.role}</span>
                 <span class="period">{r.period}</span>
               </div>
-              <p class="desc">{r.description}</p>
+              {r.description && <p class="desc">{r.description}</p>}
             </article>
           ))}
         </div>
