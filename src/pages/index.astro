@@ -10,8 +10,26 @@ const experience = [
         url: 'https://rosenthaler.co',
         role: 'Founder',
         period: '2025–Now',
-        description:
-          'Engineering studio in Berlin. Clients include HORSCH, Almanach, and Innomarks.',
+        description: 'Engineering studio in Berlin.',
+        clients: [
+          {
+            name: 'HORSCH Maschinen',
+            period: '2024–Now',
+            description:
+              'Custom software across their digital landscape — from myField and HORSCH Report to AI tools for weed detection, voice translation, and spare-parts forecasting. Plus technology planning and training on modern frontend development.',
+          },
+          {
+            name: 'Innomarks',
+            period: '2024–Now',
+            description:
+              'Building the Uncovio frontend — a document intelligence platform — now in its third generation on Next.js.',
+          },
+          {
+            name: 'Almanach',
+            period: '2024–2025',
+            description: 'Learning platform at almanach.app — built end to end.',
+          },
+        ],
       },
       {
         company: 'People Branding Company',
@@ -24,20 +42,6 @@ const experience = [
         role: 'Freelance',
         period: '2025–Now',
         description: 'Running their ad campaigns and maintaining their website.',
-      },
-      {
-        company: 'HORSCH Maschinen',
-        role: 'via Rosenthaler',
-        period: '2024–Now',
-        description:
-          'Custom software across their digital landscape — from myField and HORSCH Report to AI tools for weed detection, voice translation, and spare-parts forecasting. Plus technology planning and training on modern frontend development.',
-      },
-      {
-        company: 'Innomarks',
-        role: 'via Rosenthaler',
-        period: '2024–Now',
-        description:
-          'Building the Uncovio frontend — a document intelligence platform — now in its third generation on Next.js.',
       },
       {
         company: 'Armbrüster Consulting',
@@ -63,12 +67,6 @@ const experience = [
         role: 'Freelance Designer',
         period: '2025',
         description: 'Contributed to the redesign of a web platform for the automotive brand.',
-      },
-      {
-        company: 'Almanach',
-        role: 'via Rosenthaler',
-        period: '2024–2025',
-        description: 'Learning platform at almanach.app — built end to end.',
       },
       {
         company: 'Coffi',
@@ -141,6 +139,19 @@ const experience = [
                 <span class="period">{r.period}</span>
               </div>
               {r.description && <p class="desc">{r.description}</p>}
+              {r.clients && (
+                <div class="clients-list">
+                  {r.clients.map((c) => (
+                    <div class="client">
+                      <div class="head">
+                        <strong>{c.name}</strong>
+                        <span class="period">{c.period}</span>
+                      </div>
+                      <p class="desc">{c.description}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
             </article>
           ))}
         </div>
@@ -268,6 +279,18 @@ const experience = [
     margin-top: 2rem;
     font-size: 0.85rem;
     color: #999;
+  }
+  .clients-list {
+    margin-top: 1rem;
+    padding-left: 1.25rem;
+    border-left: 1px solid #e5e5e5;
+  }
+  .clients-list .client {
+    padding: 0.6rem 0;
+  }
+  .clients-list strong {
+    font-weight: 600;
+    font-size: 0.95rem;
   }
   .links {
     list-style: none;
