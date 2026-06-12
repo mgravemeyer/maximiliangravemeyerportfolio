@@ -32,6 +32,13 @@ const experience = [
         ],
       },
       {
+        company: 'Armbrüster Consulting',
+        role: 'Freelance Developer',
+        period: '2018–Now',
+        description:
+          'E-commerce shops, custom web applications, and shop plugins that sync data from multiple platforms into a SaaS product for automated email retargeting.',
+      },
+      {
         company: 'People Branding Company',
         role: 'Freelance Developer',
         period: '2025–Now',
@@ -42,13 +49,6 @@ const experience = [
         role: 'Freelance',
         period: '2025–Now',
         description: 'Running their ad campaigns and maintaining their website.',
-      },
-      {
-        company: 'Armbrüster Consulting',
-        role: 'Freelance Developer',
-        period: '2018–Now',
-        description:
-          'E-commerce shops, custom web applications, and shop plugins that sync data from multiple platforms into a SaaS product for automated email retargeting.',
       },
     ],
   },
@@ -113,15 +113,13 @@ const experience = [
     <span>
       <strong>Rosenthaler</strong>
       <small>We design, build, and run digital products for established companies.</small>
-      <small class="clients">HORSCH &middot; Almanach &middot; Innomarks</small>
     </span>
     <span class="arrow" aria-hidden="true">&rarr;</span>
   </a>
 
   <p>
-    Rosenthaler is where my work happens: helping established companies decide what to build,
-    then building and running it. Behind that are 8+ years of shipping across e-commerce,
-    SaaS, and industrial systems.
+    Rosenthaler is where my work happens. Behind it are 8+ years of shipping across
+    e-commerce, SaaS, and industrial systems.
   </p>
 
   <section class="experience">
@@ -159,7 +157,9 @@ const experience = [
     }
   </section>
 
-  <p>Project inquiries run through the studio &mdash; everything else, just email me.</p>
+  <p class="routing">
+    Project inquiries run through the studio &mdash; everything else, just email me.
+  </p>
 
   <ul class="links">
     <li><a href="mailto:maximilian@gravemeyer.com">maximilian@gravemeyer.com</a></li>
@@ -206,12 +206,6 @@ const experience = [
     display: block;
     color: #666;
     line-height: 1.45;
-  }
-  .studio .clients {
-    margin-top: 0.35rem;
-    font-size: 0.75rem;
-    letter-spacing: 0.04em;
-    color: #999;
   }
   .studio .arrow {
     margin-left: auto;
@@ -275,11 +269,6 @@ const experience = [
     font-size: 0.95rem;
     max-width: 60ch;
   }
-  .offhours {
-    margin-top: 2rem;
-    font-size: 0.85rem;
-    color: #999;
-  }
   .clients-list {
     margin-top: 1rem;
     padding-left: 1.25rem;
@@ -291,6 +280,14 @@ const experience = [
   .clients-list strong {
     font-weight: 600;
     font-size: 0.95rem;
+  }
+  .routing {
+    margin-top: 3rem;
+  }
+  .offhours {
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: #999;
   }
   .links {
     list-style: none;
