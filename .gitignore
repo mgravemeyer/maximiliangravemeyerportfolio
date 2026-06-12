@@ -34,3 +34,7 @@ vite.config.ts.timestamp-*
 
 # Debug
 npm-debug.log*
+
+# Astro
+.astro/
+dist/
