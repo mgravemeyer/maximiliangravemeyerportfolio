@@ -1,5 +1,68 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const experience = [
+  {
+    label: 'Currently',
+    roles: [
+      {
+        company: 'Rosenthaler',
+        url: 'https://rosenthaler.co',
+        role: 'Founder',
+        period: '2025–Now',
+        description:
+          'Running an engineering studio in Berlin — helping established companies decide what to build, then building and running it. Clients include HORSCH, Almanach, and Innomarks: from product strategy to systems in production.',
+      },
+      {
+        company: 'Stealth Startup',
+        role: 'CPO',
+        period: '2025–Now',
+        description:
+          'Leading product from 0→1 — owning strategy, roadmap, and cross-functional delivery.',
+      },
+    ],
+  },
+  {
+    label: 'Previously',
+    roles: [
+      {
+        company: 'smart',
+        role: 'Freelance Designer',
+        period: '2025',
+        description:
+          'Designing digital experiences and interface concepts for a connected vehicle platform.',
+      },
+      {
+        company: 'Coffi',
+        role: 'Freelance Developer',
+        period: '2025',
+        description:
+          'Full-stack development for a specialty coffee platform — storefront, ordering, and payments.',
+      },
+      {
+        company: 'Almanach',
+        role: 'Freelance Developer',
+        period: '2024–2025',
+        description:
+          'Built a full-stack dashboard with Next.js, Firebase Auth, Stripe payments, and ActiveCampaign tracking.',
+      },
+      {
+        company: 'Tom Tailor',
+        role: 'Freelance Developer',
+        period: '2021–2023',
+        description:
+          'Developed a headless e-commerce shop in Next.js, collaborating with integration partners in an agile team.',
+      },
+      {
+        company: 'Segler Maschinenfabrik',
+        role: 'Freelance Developer',
+        period: '2018–2022',
+        description:
+          "Conceptualized, designed, and developed an iOS enterprise app for logging internal processes. Won the 'Zukunftsfest' award.",
+      },
+    ],
+  },
+];
 ---
 
 <Layout title="Maximilian Gravemeyer — Founder of Rosenthaler">
@@ -26,6 +89,28 @@ import Layout from '../layouts/Layout.astro';
     then building and running it. Behind that are 8+ years of shipping across e-commerce,
     SaaS, and industrial systems. I also lead product as CPO at a stealth startup.
   </p>
+
+  <section class="experience">
+    {
+      experience.map((group) => (
+        <div class="group">
+          <h2>{group.label}</h2>
+          {group.roles.map((r) => (
+            <article>
+              <div class="head">
+                <strong>
+                  {r.url ? <a href={r.url} rel="noopener">{r.company}</a> : r.company}
+                </strong>
+                <span class="role">{r.role}</span>
+                <span class="period">{r.period}</span>
+              </div>
+              <p class="desc">{r.description}</p>
+            </article>
+          ))}
+        </div>
+      ))
+    }
+  </section>
 
   <p>Project inquiries run through the studio &mdash; everything else, just email me.</p>
 
@@ -87,6 +172,56 @@ import Layout from '../layouts/Layout.astro';
   .studio:hover .arrow {
     transform: translateX(2px);
     color: #1a1a1a;
+  }
+  .experience {
+    margin-top: 3rem;
+  }
+  .experience h2 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #999;
+    margin: 2rem 0 0.25rem;
+  }
+  .experience article {
+    padding: 1rem 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .experience article:last-child {
+    border-bottom: none;
+  }
+  .experience .head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.6rem;
+  }
+  .experience .head strong {
+    font-weight: 650;
+  }
+  .experience .head a {
+    text-decoration: none;
+  }
+  .experience .head a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .experience .role {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  .experience .period {
+    margin-left: auto;
+    color: #999;
+    font-size: 0.85rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .experience .desc {
+    margin-top: 0.35rem;
+    color: #666;
+    font-size: 0.95rem;
+    max-width: 60ch;
   }
   .links {
     list-style: none;
