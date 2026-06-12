@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { gsap, ScrollTrigger } from '$lib/utils/animations';
+	import DinoGame from '$lib/components/DinoGame.svelte';
 
 	let sectionEl = $state<HTMLElement | null>(null);
 	let line1El = $state<HTMLDivElement | null>(null);
@@ -233,25 +234,33 @@
 				Maximilian
 			</div>
 
-			<!-- Last name — spotlight reveal -->
-			<div
-				bind:this={line2WrapEl}
-				class="relative opacity-0"
-				style="--mx: 50%; --my: 50%;"
-			>
-				<!-- Faint base layer (outline only) -->
+			<!-- Last name + Dino game row -->
+			<div class="flex items-end gap-6">
+				<!-- Last name — spotlight reveal -->
 				<div
-					class="text-[clamp(3rem,10vw,8rem)] leading-[0.95] font-bold tracking-tight select-none"
-					style="color: var(--color-bg); -webkit-text-stroke: 2px var(--color-text); paint-order: stroke fill; opacity: 0.2;"
+					bind:this={line2WrapEl}
+					class="relative opacity-0"
+					style="--mx: 50%; --my: 50%;"
 				>
-					Gravemeyer
+					<!-- Faint base layer (outline only) -->
+					<div
+						class="text-[clamp(3rem,10vw,8rem)] leading-[0.95] font-bold tracking-tight select-none"
+						style="color: var(--color-bg); -webkit-text-stroke: 2px var(--color-text); paint-order: stroke fill; opacity: 0.2;"
+					>
+						Gravemeyer
+					</div>
+					<!-- Bright layer — outline revealed by cursor spotlight -->
+					<div
+						class="hero-spotlight-bright absolute inset-0 text-[clamp(3rem,10vw,8rem)] leading-[0.95] font-bold tracking-tight select-none"
+						style="color: var(--color-bg); -webkit-text-stroke: 2px var(--color-text); paint-order: stroke fill;"
+					>
+						Gravemeyer
+					</div>
 				</div>
-				<!-- Bright layer — outline revealed by cursor spotlight -->
-				<div
-					class="hero-spotlight-bright absolute inset-0 text-[clamp(3rem,10vw,8rem)] leading-[0.95] font-bold tracking-tight select-none"
-					style="color: var(--color-bg); -webkit-text-stroke: 2px var(--color-text); paint-order: stroke fill;"
-				>
-					Gravemeyer
+
+				<!-- Dino game -->
+				<div class="hidden pb-2 lg:block">
+					<DinoGame />
 				</div>
 			</div>
 

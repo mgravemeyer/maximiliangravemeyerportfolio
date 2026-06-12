@@ -31,9 +31,9 @@
 				{
 					company: 'Rosenthaler',
 					url: 'https://rosenthaler.co',
-					role: 'Co-Founder',
+					role: 'Founder',
 					period: '2025–Now',
-					description: 'Running a product studio in Berlin — architecting digital products for startups and industrial leaders like HORSCH. Full lifecycle from 0\u21921 strategy to high-scale engineering.'
+					description: 'Running an engineering studio in Berlin — helping established companies decide what to build, then building and running it. Clients include HORSCH, Almanach, and Innomarks: from product strategy to systems in production.'
 				}
 			]
 		},

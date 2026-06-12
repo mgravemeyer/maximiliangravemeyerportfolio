@@ -110,7 +110,7 @@
 						In <span class="inline rounded px-1 font-semibold" style:background-color="var(--color-bg-alt)" style:color="var(--color-text)">8+ years</span> I've
 						designed, coded, and shipped across e-commerce, SaaS, and industrial systems.
 						Today I run <span class="inline rounded px-1 font-semibold" style:background-color="var(--color-bg-alt)" style:color="var(--color-text)">Rosenthaler</span>,
-						a product studio in Berlin, and lead product as CPO at a
+						an engineering studio in Berlin, and lead product as CPO at a
 						<span class="inline rounded px-1 font-semibold" style:background-color="var(--color-bg-alt)" style:color="var(--color-text)">stealth startup</span>.
 						I move between strategy, design, and code — AI tools wired into every step.
 					</p>

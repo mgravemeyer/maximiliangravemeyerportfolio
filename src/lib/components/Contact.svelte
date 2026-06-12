@@ -10,6 +10,7 @@
 	const headlineWords = "Let's build something great".split(' ');
 
 	const links = [
+		{ label: 'Rosenthaler', href: 'https://rosenthaler.co' },
 		{ label: 'Email', href: 'mailto:maximilian@gravemeyer.com' },
 		{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/mgravemeyer/' },
 		{ label: 'GitHub', href: 'https://github.com/mgravemeyer' }
@@ -105,7 +106,7 @@
 							class="text-sm font-medium"
 							style="color: rgba(255, 255, 255, 0.7);"
 						>
-							Open to collaborate
+							Project inquiries run through Rosenthaler
 						</span>
 					</div>
 
@@ -144,7 +145,9 @@
 						class="mt-10 text-sm leading-relaxed"
 						style="color: rgba(255, 255, 255, 0.4);"
 					>
-						Based in Berlin, Germany. Usually respond within 24 hours.
+						Based in Berlin, Germany. For new products and engagements, start at
+						<a href="https://rosenthaler.co" target="_blank" rel="noopener noreferrer" class="underline" style="color: rgba(255, 255, 255, 0.7);">rosenthaler.co</a>
+						— everything else, just email me. Usually respond within 24 hours.
 					</p>
 				</div>
 			</div>
