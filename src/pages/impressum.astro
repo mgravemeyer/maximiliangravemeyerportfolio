@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Impressum — Maximilian Gravemeyer" noindex>
+  <h1>Impressum</h1>
+  <p class="label">Angaben gemäß § 5 DDG</p>
+  <p>
+    Maximilian Gravemeyer Softwareentwicklung und Design<br />
+    Zehdenicker Straße 15<br />
+    10119 Berlin<br />
+    Deutschland
+  </p>
+  <p>E-Mail: <a href="mailto:maximilian@gravemeyer.com">maximilian@gravemeyer.com</a></p>
+
+  <h2>Verantwortlich für den Inhalt</h2>
+  <p>Nach § 18 Abs. 2 MStV: Maximilian Gravemeyer, Anschrift wie oben.</p>
+
+  <h2>Verbraucherstreitbeilegung</h2>
+  <p>
+    Ich bin nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer
+    Verbraucherschlichtungsstelle teilzunehmen.
+  </p>
+
+  <p class="back"><a href="/">&larr; Zurück</a></p>
+</Layout>
+
+<style>
+  p {
+    margin-top: 1rem;
+    max-width: 60ch;
+  }
+  h2 {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #666;
+  }
+  .label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #666;
+  }
+  .back {
+    margin-top: 3rem;
+  }
+</style>

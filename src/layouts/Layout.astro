@@ -1,0 +1,94 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description = 'Maximilian Gravemeyer, founder of Rosenthaler. Berlin.',
+  noindex = false,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" style="background-color: #fafafa">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+  <body>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <span>&copy; {new Date().getFullYear()} Maximilian Gravemeyer</span>
+      <nav>
+        <a href="/impressum/">Impressum</a>
+        <a href="/datenschutz/">Datenschutz</a>
+      </nav>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  body {
+    font-family:
+      ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: #fafafa;
+    color: #1a1a1a;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  main {
+    max-width: 38rem;
+    margin: 0 auto;
+    padding: 6rem 1.5rem 4rem;
+  }
+  footer {
+    max-width: 38rem;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: #999;
+    border-top: 1px solid #e5e5e5;
+  }
+  footer nav {
+    display: flex;
+    gap: 1rem;
+  }
+  footer a {
+    color: #999;
+    text-decoration: none;
+  }
+  footer a:hover {
+    color: #1a1a1a;
+  }
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+  }
+  a {
+    color: #1a1a1a;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: #ccc;
+  }
+  a:hover {
+    text-decoration-color: #1a1a1a;
+  }
+</style>
